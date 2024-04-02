@@ -1,15 +1,10 @@
-import "@fontsource/inter";
+import '@fontsource/inter';
 
-import { useState } from "react";
-import { useQuery, QueryClient, QueryClientProvider, useQueryClient } from "@tanstack/react-query";
-import axios from "axios";
-import { Container } from "@mui/material";
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { Container } from '@mui/material';
 
-import Header from "./components/Header/Header";
-import ElementsInput from "./components/ElementsInput/ElementsInput";
-import ContentWrapper from "./components/ContentWrapper/ContentWrapper";
-import TagsTable from "./components/TagsTable/TagsTable";
-import TableSection from "./components/TableSection/TableSection";
+import Header from './components/Header/Header';
+import TableSection from './components/TableSection/TableSection';
 
 const queryClient = new QueryClient();
 
