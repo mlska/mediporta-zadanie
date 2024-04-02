@@ -4,7 +4,7 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { Container } from '@mui/material';
 
 import Header from './components/Header/Header';
-import TableSection from './components/TableSection/TableSection';
+import TableSection from './components/Sections';
 
 const queryClient = new QueryClient();
 

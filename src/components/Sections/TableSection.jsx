@@ -1,13 +1,13 @@
-import { useState } from "react";
-import { useQuery, QueryClient, QueryClientProvider, useQueryClient } from "@tanstack/react-query";
-import axios from "axios";
+import { useState } from 'react';
+import { useQuery } from '@tanstack/react-query';
+import axios from 'axios';
 
-import { API_URL } from "../../constants/constants";
+import { API_URL } from '../../constants/constants';
 
-import ElementsInput from "../ElementsInput/ElementsInput";
-import TagsTable from "../TagsTable/TagsTable";
-import ContentWrapper from "../ContentWrapper/ContentWrapper";
-import Message from "../Message/Message";
+import ElementsInput from '../Inputs';
+import TagsTable from '../Tables';
+import ContentWrapper from '../ContentWrapper';
+import Message from '../Messages';
 
 const TableSection = () => {
   const [rowsPerPage, setRowsPerPage] = useState(10);
@@ -16,12 +16,12 @@ const TableSection = () => {
     setRowsPerPage(rows);
   };
 
-  const { isPending, error, data, isFetching } = useQuery({
-    queryKey: ["tags"],
+  const { isPending, error, data } = useQuery({
+    queryKey: ['tags'],
     queryFn: () =>
       axios.get(API_URL).then((res) => {
         return res.data;
-      }),
+      })
   });
 
   return (
