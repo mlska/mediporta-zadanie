@@ -22,7 +22,7 @@ const TagsTableToolbar = ({ numSelected }) => {
     >
       {numSelected > 0 ? (
         <Typography sx={{ flex: '1 1 100%' }} component="div">
-          {numSelected} selected
+          {numSelected} zaznaczono
         </Typography>
       ) : (
         <Typography level="body-lg" sx={{ flex: '1 1 100%' }} id="tableTitle" component="div">
